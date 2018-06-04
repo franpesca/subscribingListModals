@@ -109,7 +109,7 @@ class App extends Component {
         />
         <span > {this.state.fieldsError.email} </span>
         <br/>
-        <button className='myButton'> RSVP! </button>
+        <button className='myButton'> cIAO BABLUVA! </button>
         </form>
         {/* {this.state.people.length >= 1 ? this.mostraModale : null } */}
         {/* <button onClick={this.mostraModale}>MOSTRA MODALE</button> */}
