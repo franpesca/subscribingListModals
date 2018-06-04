@@ -1,0 +1,79 @@
+.overlay{
+    z-index: 202;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-color: rgba(163, 238, 238, 0.591);
+}
+
+.modale{
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    color: #80170e;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.05),
+      0 10px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-overlay='false']{
+    animation: nascondi-modale 1s ease-in
+}
+
+[data-overlay='true']{
+    animation: mostra-modale 1s ease-in-out
+}
+
+@keyframes mostra-modale{
+    0% {
+        opacity: 0;
+      }
+    
+    100% {
+        opacity: 1;
+      }
+}
+@keyframes nascondi-modale{
+    0% {
+        opacity: 1;
+        visibility: visible;
+      }
+    
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+}
+
+.button {
+    margin-top: 40px;
+	-moz-box-shadow:inset 0px 34px 0px -15px #f5f5f5;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #f5f5f5;
+	box-shadow:inset 0px 34px 0px -15px #f5f5f5;
+	background-color:transparent;
+	border:1px solid #80180e;
+	display:inline-block;
+	cursor:pointer;
+	color:#80180e;
+	font-family:Times New Roman;
+	font-size:14px;
+	font-weight:bold;
+	padding:9px 8px;
+	text-decoration:none;
+}
+.button:hover {
+	background-color:transparent;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+
