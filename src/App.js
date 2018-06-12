@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './photos/wine.png';
+import logo from './photos/grape-1.png';
 import './App.css';
 import isEmail from 'validator/lib/isEmail';
 import Modale from './modale';
@@ -67,6 +67,12 @@ class App extends Component {
 
     this.setState({fieldsError})
 
+    if(people.length === 4) {
+
+      this.mostraModale()
+      return
+    }
+
     if (Object.keys(fieldsError).length) return
     this.setState({
       people: people.concat(person),
@@ -80,11 +86,24 @@ class App extends Component {
 
     this.state.people.length >= 3 ? this.mostraModale() : null 
 
+  //   maxArr(click){
+
+  //     const limitedList = [...this.state.people]
+  
+  //     limitedList.splice(0,3)
+  
+  //     this.setState({
+  //       people: limitedList
+  //     })
+  // }
+
   }
 
   render() {
     return (
       <div className='main'>
+      <div className='overLay'>
+      <div className='container'>
       <div className="App">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Wine Tasting</h1>
@@ -125,6 +144,8 @@ class App extends Component {
         /> 
       ) : ('')
       }
+      </div>
+      </div>
       </div>
     );
   }

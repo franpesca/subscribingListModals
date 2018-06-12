@@ -14,7 +14,7 @@ render(){
     return(
         <div className='overlay' data-overlay={this.props.showIn}> 
             <div className='modale' >
-            <h2 > Too late darling,  we are fully booked! 
+            <h2 className='mod'> Too late darling,  we are fully booked! 
             <button className='button' onClick={this.props.nascondiModale}>
             CHIUDI
             </button>
